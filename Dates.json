@@ -1,0 +1,47 @@
+{
+  "Monday": {
+    "MeetingID": "82628056332",
+    "Passcode": "122965",
+    "pass": true
+  },
+  "Tuesday": {
+    "MeetingID": "82628056332",
+    "Passcode": "122965",
+    "pass": true
+  },
+  "Wednesday": {
+    "MeetingID": "88046146986",
+    "Passcode": "095202",
+    "pass": true
+  },
+  "Thursday": {
+    "MeetingID": "82628056332",
+    "Passcode": "122965",
+    "pass": true
+  },
+  "Friday": {
+    "MeetingID": "82628056332",
+    "Passcode": "122965",
+    "pass": true
+  },
+  "Saturday": {
+    "MeetingID": "3976868449",
+    "Passcode": "3uFGwE",
+    "pass": true
+  },
+  "Sunday": {
+    "MeetingID": "88046146986",
+    "Passcode": "095202",
+    "pass": true
+  },
+  "WedMtg": {
+    "MeetingID": "82628056332",
+    "Passcode": "122965",
+    "pass": true
+  },
+  "FirstSat": {
+    "MeetingID": "82628056332",
+    "Passcode": "122965",
+    "pass": true
+  }
+}
