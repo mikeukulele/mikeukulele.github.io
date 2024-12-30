@@ -1,7 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weekly Redirect</title>
+	<script>
+		function redirectToDayPage() {
+			const days = [
+				"https://mikeukulele.github.io/monday.html",    // Monday
+			   ```javascript
+				"https://example.com/tuesday",   // Tuesday
+				"https://example.com/wednesday", // Wednesday
+				"https://example.com/thursday",  // Thursday
+				"https://example.com/friday",    // Friday
+				"https://example.com/saturday",  // Saturday
+				"https://mikeukulele.github.io/sunday.html"     // Sunday
+			];
+
+			const today = new Date();
+			const dayIndex = today.getDay(); // Sunday - Saturday : 0 - 6
+			window.location.href = days[dayIndex];
+		}
+
+		window.onload = redirectToDayPage;
+	</script>
+</head>
 <body>
-<h1>mikeukulele</h1>
-<p>this is just a testdev site</p>
+	<h1>Redirecting...</h1>
+	<p>If you are not redirected automatically, <a href="#" onclick="redirectToDayPage()">click here</a>.</p>
 </body>
 </html>
