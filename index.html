@@ -3,30 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Weekly Redirect</title>
+	<title>Redirect Based on Day</title>
 	<script>
-		function redirectToDayPage() {
-			const days = [
-				"https://mikeukulele.github.io/monday.html",    // Monday
-			   ```javascript
-				"https://example.com/tuesday",   // Tuesday
-				"https://example.com/wednesday", // Wednesday
-				"https://example.com/thursday",  // Thursday
-				"https://example.com/friday",    // Friday
-				"https://example.com/saturday",  // Saturday
-				"https://mikeukulele.github.io/sunday.html"     // Sunday
-			];
-
+		function redirectToPage() {
 			const today = new Date();
-			const dayIndex = today.getDay(); // Sunday - Saturday : 0 - 6
-			window.location.href = days[dayIndex];
+			const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+
+			let url;
+
+			switch (dayOfWeek) {
+				case 0: // Sunday
+					url = "https://mikeukulele.github.io/monday.html";
+					break;
+				case 1: // Monday
+					url = "https://example.com/monday";
+					break;
+				case 2: // Tuesday
+					url = "https://example.com/tuesday";
+					break;
+				case 3: // Wednesday
+					url = "https://example.com/wednesday";
+					break;
+				case 4: // Thursday
+					url = "https://example.com/thursday";
+					break;
+				case 5: // Friday
+					url = "https://example.com/friday";
+					break;
+				case 6: // Saturday
+					url = "https://example.com/saturday";
+					break;
+				default:
+					url = "https://example.com/default"; // Fallback URL
+			}
+
+			window.location.href = url; // Redirect to the selected URL
 		}
 
-		window.onload = redirectToDayPage;
+		window.onload = redirectToPage; // Call the redirect function when the page loads
 	</script>
 </head>
 <body>
 	<h1>Redirecting...</h1>
-	<p>If you are not redirected automatically, <a href="#" onclick="redirectToDayPage()">click here</a>.</p>
+	<p>If you are not redirected, <a href="https://example.com/default">click here</a>.</p>
 </body>
 </html>
